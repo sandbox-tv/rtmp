@@ -27,11 +27,6 @@ RUN cd /usr/src/nginx/nginx-1.9.5 && \
 ADD nginx.conf /usr/local/nginx/conf/nginx.conf
 RUN echo "\ndaemon off;" >> /usr/local/nginx/conf/nginx.conf
 
-RUN mkdir -p /HLS/live && \
-	mkdir -p /HLS/480
-
-ADD crossdomain.xml /usr/local/nginx/html/crossdomain.xml
-
 CMD sudo /usr/local/nginx/sbin/nginx
 
 EXPOSE 1935
