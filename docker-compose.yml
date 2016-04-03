@@ -1,0 +1,8 @@
+hls-rtmp:
+    container_name: 'hls-rtmp'
+
+    build: .
+
+    ports:
+        - '1935:1935'
+        - '80:80'

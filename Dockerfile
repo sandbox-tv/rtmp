@@ -30,8 +30,6 @@ RUN echo "\ndaemon off;" >> /usr/local/nginx/conf/nginx.conf
 RUN mkdir -p /HLS/live && \
 	mkdir -p /HLS/480
 
-ADD crossdomain.xml /usr/local/nginx/html/crossdomain.xml
-
 CMD sudo /usr/local/nginx/sbin/nginx
 
 EXPOSE 1935
